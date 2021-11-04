@@ -12,11 +12,11 @@ import string
 
 def char():
     upper = list(string.ascii_uppercase)
-    
+
     lower = list(string.ascii_lowercase)
-    
+
     special = list(string.punctuation)
-    
+
     num = list(string.digits)
 
     character = upper + lower + special + num
@@ -32,7 +32,7 @@ def char():
 
 def main():
     password = char()
-    print("Generate pasword: " + password)
+    print("Password generated: " + password)
 
 if __name__ == "__main__":
     main()
