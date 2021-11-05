@@ -7,25 +7,18 @@ Created on Fri Oct 29 20:58:09 2021
 """
 # My own password generator
 
-import random
+import secrets
 import string
 
 def char():
-    upper = list(string.ascii_uppercase)
-
-    lower = list(string.ascii_lowercase)
-
-    special = list(string.punctuation)
-
-    num = list(string.digits)
-
-    character = upper + lower + special + num
+    
+    characters = string.ascii_letters + string.punctuation + string.digits
 
     password = []
 
-    for i in range(17):
-        random_character = random.choice(character)
-        password.append(random_character)
+    for i in range(16):
+        random_characters = secrets.choice(characters)
+        password.append(random_characters)
 
     password = "".join(password)
     return password
